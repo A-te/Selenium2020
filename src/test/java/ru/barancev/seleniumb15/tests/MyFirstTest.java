@@ -1,4 +1,4 @@
-package tests;
+package ru.barancev.seleniumb15.tests;
 
 import org.junit.After;
 import org.junit.Before;
