@@ -33,7 +33,7 @@ public class Assignment8 extends assignmentHelper {
     @Test
     public void listOfElementsTest(){
         driver.get("http://localhost/litecart");
-        List<WebElement> elements = driver.findElements(By.cssSelector("div.content div.content ul li a.link"));
+        List<WebElement> elements = driver.findElements(By.cssSelector("li.product"));
         MatcherAssert.assertThat(elements.size(), CoreMatchers.equalTo(11));
         for (WebElement element : elements){
             List<WebElement>stickers=element.findElements(By.cssSelector(".sticker"));
