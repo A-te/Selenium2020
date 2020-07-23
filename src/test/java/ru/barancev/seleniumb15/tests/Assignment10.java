@@ -26,6 +26,7 @@ public class Assignment10 extends assignmentHelper {
         DesiredCapabilities caps = new DesiredCapabilities();
         driver=new FirefoxDriver();
         //driver = new ChromeDriver();
+        //driver = new InternetExplorerDriver();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         wait=new WebDriverWait(driver,5);
         System.out.println(((HasCapabilities) driver).getCapabilities());
@@ -79,6 +80,7 @@ public class Assignment10 extends assignmentHelper {
         String textColorMainPage = driver.findElement(By.cssSelector("div#box-campaigns div.content " +
                 "s.regular-price")).getCssValue("color");
         System.out.println(textColorMainPage);
+        System.out.println(textStyleMainPage);
         System.out.println(isGreyFirefox(textColorMainPage));
         Assert.assertEquals(true,isGreyFirefox(textColorMainPage));
         System.out.println(textStyleMainPage);
